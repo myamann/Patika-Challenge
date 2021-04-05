@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color:#eaecef;
+}
+ /** todo part **/
 .head-content{
   height: 200px;
   width: 100%;
@@ -57,4 +65,72 @@
   background-color: #F6F7F8;
   padding : 40px 100px;
 }
+/** to do part end **/
 
+
+/**Sidebar start **/
+
+header {
+  padding: 30px;
+  color:#eaecef;
+
+  background: #011627;
+  height: 80px;
+}
+
+.sidenav {
+  width: 240px;
+  background: #011627;
+  position: absolute;
+  height: 95vh;
+  padding: 0 30px;
+  left:-100%;
+  transition: all .5s;
+}
+.sidenav.active{
+  left:0;
+}
+
+.profile {
+  color:#eaecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.logo {
+  
+  height: 100px;
+  width: auto;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a {
+  color:#eaecef;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+ul li a:hover,
+ul li a:active {
+  color:#eaecef;
+  background: #172b4d;
+  text-decoration: none;
+}
+
+header svg{
+  font-size:50px;
+  margin-top:-15px;
+  color:#eaecef;
+}
