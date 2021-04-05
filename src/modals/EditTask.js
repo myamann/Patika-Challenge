@@ -38,11 +38,11 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
             
                     <div className = "form-group">
                         <label>Project Name</label>
-                        <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName" maxlength="18"/>
+                        <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName" maxLength="18"/>
                     </div>
                     <div className = "form-group">
                         <label>Description</label>
-                        <textarea rows = "5" className = "form-control" value = {description} onChange = {handleChange} name = "description" maxlength="25"></textarea>
+                        <textarea rows = "5" className = "form-control" value = {description} onChange = {handleChange} name = "description" maxLength="25"></textarea>
                     </div>
                 
             </ModalBody>

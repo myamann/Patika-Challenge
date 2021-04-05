@@ -1,5 +1,9 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import {Link} from 'react-router-dom';
+import {FiHome} from 'react-icons/fi'
+import {BsPersonFill} from 'react-icons/bs'
+import {MdWork} from 'react-icons/md'
 
 const Navbar = ({show}) => {
   return (
@@ -11,13 +15,13 @@ const Navbar = ({show}) => {
 
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/" ><FiHome/>Home</Link>
         </li>
         <li>
-          <a href="/">About Me</a>
+          <Link to="/about"><BsPersonFill/>About</Link>
         </li>
         <li>
-          <a href="/">Categories</a>
+        <Link to="/"><MdWork/>Projects</Link>
         </li>
       </ul>
     </div>

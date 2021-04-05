@@ -45,6 +45,7 @@ body {
   display : flex;
   flex-direction: column;
   position: relative;
+  color:#011627;
 }
 
 .card-header{
@@ -65,6 +66,10 @@ body {
   background-color: #F6F7F8;
   padding : 40px 100px;
 }
+
+label,h5 {
+  color:#011627;
+}
 /** to do part end **/
 
 
@@ -82,10 +87,11 @@ header {
   width: 240px;
   background: #011627;
   position: absolute;
-  height: 95vh;
+  height: 100%;
   padding: 0 30px;
   left:-100%;
   transition: all .5s;
+  z-index: 100;
 }
 .sidenav.active{
   left:0;
@@ -123,10 +129,15 @@ ul li a {
 }
 
 ul li a:hover,
-ul li a:active {
+ul li a.active {
   color:#eaecef;
   background: #172b4d;
   text-decoration: none;
+}
+
+ul li a svg {
+  margin-right: 10px;
+  margin-bottom:4px;
 }
 
 header svg{
@@ -134,3 +145,4 @@ header svg{
   margin-top:-15px;
   color:#eaecef;
 }
+

@@ -34,11 +34,11 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
             
                     <div className = "form-group">
                         <label>Project Name</label>
-                        <input type="text" required className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"  maxlength="18"/>
+                        <input type="text" required className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"  maxLength="18" placeholder="What is your project title."/>
                     </div>
                     <div className = "form-group">
                         <label>Description</label>
-                        <textarea rows = "5" required className = "form-control" value = {description} onChange = {handleChange} name = "description"  maxlength="25"></textarea>
+                        <textarea rows = "5" required className = "form-control" value = {description} onChange = {handleChange} name = "description"  maxLength="25" placeholder="Enter a short description about your project..."></textarea>
                     </div>
                 
             </ModalBody>
