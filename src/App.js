@@ -17,7 +17,7 @@ function App() {
     <>
       <Router>
         <header>
-          <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
+          <GiHamburgerMenu onClick={() => setShowNav(!showNav)} style={{"cursor":"pointer"}}/>
         </header>
 
         <Navbar show={showNav} />

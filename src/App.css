@@ -146,3 +146,32 @@ header svg{
   color:#eaecef;
 }
 
+/** Card **/
+.add-item-input {
+  display: flex;
+}
+
+.card-list-item-wrapper{
+display: flex;
+flex-wrap: wrap;
+height: 160px;
+overflow: auto;
+
+}
+.card-list-item {
+  overflow-x: auto;
+  padding-left: 10px;
+  
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  cursor: pointer;
+  color:#011627;
+}
+
