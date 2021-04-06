@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import Login from './pages/Login'
 import ToDoList from "./components/TodoList";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Router>
+      <Route path="/login" exact={true} component={Login} />
         <header>
           <GiHamburgerMenu onClick={() => setShowNav(!showNav)} style={{"cursor":"pointer"}}/>
         </header>

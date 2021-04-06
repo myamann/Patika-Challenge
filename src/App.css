@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -9,6 +9,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #F6F7F8;
   color:#eaecef;
 }
  /** todo part **/
@@ -173,5 +174,72 @@ overflow: auto;
 .icons {
   cursor: pointer;
   color:#011627;
+}
+
+/* about */
+.about {
+  background-color: #F6F7F8;
+  height: 100%;
+}
+.about-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  color:#011627;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container{
+  left: 0;
+  bottom: 0;
+  margin-top:20px;
+  border-radius: 5px;
+  width: 100%;
+  
+  color: white;
+  text-align: center;
+}
+
+.footer-ul a{
+  text-decoration: none;
+  color:#011627;
+}
+.footer-ul i{
+  padding-top:  10px ;
+  height: 20px;
+  width: 20px;
+}
+.footer-ul i:hover{
+  color:green;
+  cursor: pointer;
+}
+.footer-ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-li{
+  list-style: none;
+  padding: 4px;
+}
+
+.footer-copyright {
+ padding-bottom:  3px;
+ color:#011627;
+ font-weight: 500;
+}
+
+.footer-copyright p {
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer-copyright a {
+  text-decoration: underline;
+}
+
+.footer-copyright a:hover{
+  color:green;
+  text-decoration: none;
 }
 
