@@ -27,7 +27,6 @@ const TodoList = () => {
   };
 
   const updateListArray = (obj, index) => {
-    
     let tempList = taskList;
     tempList[index] = obj;
     localStorage.setItem("taskList", JSON.stringify(tempList));
@@ -53,19 +52,21 @@ const TodoList = () => {
     setTaskList(taskList);
   };
   const addItem = (item, index) => {
-    let tempList = taskList;
-    tempList[index].todos.push(item);
+    if (item.length > 0) {
+      let tempList = taskList;
 
-    localStorage.setItem("taskList", JSON.stringify(tempList));
-    setTaskList((prev) => {
-      prev[index].todos.push(item);
-      prev[index].todos.splice(-1, 1);
-      return [...prev];
-    });
+      tempList[index].todos.push(item);
+
+      localStorage.setItem("taskList", JSON.stringify(tempList));
+      setTaskList((prev) => {
+        prev[index].todos.push(item);
+        prev[index].todos.splice(-1, 1);
+        return [...prev];
+      });
+    }
   };
 
   const deleteTaskItem = (taskObj, itemIndex, index) => {
-    
     let lastArr = [];
     lastArr = taskObj.todos.filter((e, i) => i !== itemIndex);
     taskObj.todos = lastArr;

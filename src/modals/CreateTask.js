@@ -18,17 +18,19 @@ const CreateTaskPopup = ({ modal, toggle, save }) => {
   };
 
   const handleSave = (e) => {
-    e.preventDefault();
-    let taskObj = {};
-    taskObj["Name"] = taskName;
-    taskObj["Description"] = description;
-    taskObj["check"] = check;
-    taskObj["todos"] = todos;
-    save(taskObj);
-    setTaskName("");
-    setDescription("");
-    setCheck(false);
-    setTodos([]);
+    if (taskName.length > 0 && description.length > 0) {
+      e.preventDefault();
+      let taskObj = {};
+      taskObj["Name"] = taskName;
+      taskObj["Description"] = description;
+      taskObj["check"] = check;
+      taskObj["todos"] = todos;
+      save(taskObj);
+      setTaskName("");
+      setDescription("");
+      setCheck(false);
+      setTodos([]);
+    }
   };
 
   return (
@@ -46,7 +48,6 @@ const CreateTaskPopup = ({ modal, toggle, save }) => {
             name="taskName"
             maxLength="18"
             placeholder="What is your project title."
-            
           />
         </div>
         <div className="form-group">
@@ -58,17 +59,15 @@ const CreateTaskPopup = ({ modal, toggle, save }) => {
             value={description}
             onChange={handleChange}
             name="description"
-            
             maxLength="25"
             placeholder="Enter a short description about your project..."
-            
           ></textarea>
         </div>
       </ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={handleSave}>
           Create
-        </Button>{" "}
+        </Button>
         <Button color="secondary" onClick={toggle}>
           Cancel
         </Button>

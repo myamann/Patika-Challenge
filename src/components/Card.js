@@ -10,6 +10,7 @@ const Card = ({
   deleteTaskItem,
 }) => {
   const [itemValue, setItemValue] = useState("");
+
   const colors = [
     {
       primaryColor: "#5D93E1",
@@ -57,39 +58,43 @@ const Card = ({
           className="mt-3"
           style={{ overflow: "auto", marginBottom: "10px" }}
         >
-         <div className="add-item-input">
+          <div className="add-item-input">
             <input
-            type="text"
-            value={itemValue}
-            onChange={(text) => {
-              setItemValue(text.target.value);
-            }}
-            className="form-control "
-            placeholder="Add a item"
-          />
+              type="text"
+              value={itemValue}
+              onChange={(text) => {
+                setItemValue(text.target.value);
+              }}
+              className="form-control "
+              placeholder="Add a item"
+            />
 
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => addItem(itemValue, index)}
-          >
-            +
-          </button>
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => addItem(itemValue, index)}
+            >
+              +
+            </button>
           </div>
-          </div>
+        </div>
 
-          {/* Adding card item part  */ }
-           <div className="card-list-item-wrapper">
-                {taskObj.todos.map((item, itemIndex) => {
-                  return (
-                    <div className="card-list-item" key={itemIndex}>
-                      <div>{item}</div>{" "}
-                      <div onClick={() => deleteTaskItem(taskObj, itemIndex, index)}>
-                        <i className="fas fa-times icons"></i>
-                      </div>
-                    </div>
-                  );
-                })}
+        {/* Adding card item part  */}
+        <div className="card-list-item-wrapper">
+          {taskObj.todos.map((item, itemIndex) => {
+            return (
+              <>
+                <div className="card-list-item" key={itemIndex}>
+                  <div>{item}</div>
+                  <div
+                    onClick={() => deleteTaskItem(taskObj, itemIndex, index)}
+                  >
+                    <i className="fas fa-times icons"></i>
+                  </div>
+                </div>
+              </>
+            );
+          })}
         </div>
         <div style={{ position: "absolute", right: "20px", bottom: "20px" }}>
           <i

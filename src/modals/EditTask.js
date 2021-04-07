@@ -21,14 +21,16 @@ const EditTaskPopup = ({ modal, toggle, updateTask, taskObj, index }) => {
   }, []);
 
   const handleUpdate = (e) => {
-    e.preventDefault();
-    let tempObj = {};
-    tempObj["Name"] = taskName;
-    tempObj["Description"] = description;
-    tempObj.todos = taskObj.todos;
-    tempObj.checked = taskObj.checked;
-    updateTask(tempObj, index);
-    toggle();
+    if (taskName.length > 0 && description.length > 0) {
+      e.preventDefault();
+      let tempObj = {};
+      tempObj["Name"] = taskName;
+      tempObj["Description"] = description;
+      tempObj.todos = taskObj.todos;
+      tempObj.checked = taskObj.checked;
+      updateTask(tempObj, index);
+      toggle();
+    }
   };
 
   return (
