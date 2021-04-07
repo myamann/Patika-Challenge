@@ -83,8 +83,8 @@ const Card = ({
         <div className="card-list-item-wrapper">
           {taskObj.todos.map((item, itemIndex) => {
             return (
-              <>
-                <div className="card-list-item" key={itemIndex}>
+              <div key={itemIndex}>
+                <div className="card-list-item" >
                   <div>{item}</div>
                   <div
                     onClick={() => deleteTaskItem(taskObj, itemIndex, index)}
@@ -92,7 +92,7 @@ const Card = ({
                     <i className="fas fa-times icons"></i>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

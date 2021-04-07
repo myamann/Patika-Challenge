@@ -30,9 +30,9 @@ const About = () => {
       <p className="about-text">All Rights Reserved</p>
             <div >
                 <ul className="footer-ul">
-                    <li className="footer-li">  <a href="https://github.com/myamann"><i class="fab fa-github fa-lg"></i></a>  </li>
-                    <li className="footer-li">  <a href="https://www.linkedin.com/in/mehmet-yaman-05b7a1167/"><i class="fab fa-linkedin fa-lg"></i></a>  </li>
-                    <li className="footer-li">  <a href="https://www.instagram.com/mmehmetyamann/"> <i class="fab fa-instagram fa-lg"></i></a>   </li>
+                    <li className="footer-li">  <a href="https://github.com/myamann"><i className="fab fa-github fa-lg"></i></a>  </li>
+                    <li className="footer-li">  <a href="https://www.linkedin.com/in/mehmet-yaman-05b7a1167/"><i className="fab fa-linkedin fa-lg"></i></a>  </li>
+                    <li className="footer-li">  <a href="https://www.instagram.com/mmehmetyamann/"> <i className="fab fa-instagram fa-lg"></i></a>   </li>
                 </ul>
             </div>
 

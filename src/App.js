@@ -18,7 +18,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/login" exact={true} component={Login} />
+          <Route path="/" exact={true} component={Login} />
 
           <div>
             <header>
@@ -29,7 +29,7 @@ function App() {
             </header>
             <Navbar show={showNav} />
 
-            <Route path="/" exact={true} component={Home} />
+            <Route path="/home" exact={true} component={Home} />
             <Route path="/about" exact={true} component={About} />
           </div>
         </Switch>

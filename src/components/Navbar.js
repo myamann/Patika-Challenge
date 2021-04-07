@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { FiHome } from "react-icons/fi";
 import { BsPersonFill } from "react-icons/bs";
-import { MdWork } from "react-icons/md";
+import { BiLogOut } from "react-icons/bi";
 
 const Navbar = ({ show }) => {
   const userName = localStorage.getItem("name");
@@ -21,7 +21,7 @@ const Navbar = ({ show }) => {
       </div>
       <ul>
         <li>
-          <Link to="/">
+          <Link to="/home">
             <FiHome />
             Home
           </Link>
@@ -34,8 +34,8 @@ const Navbar = ({ show }) => {
         </li>
         <li>
           <Link to="/">
-            <MdWork />
-            Projects
+            <BiLogOut />
+            Logout
           </Link>
         </li>
       </ul>

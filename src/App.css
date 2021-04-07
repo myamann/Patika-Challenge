@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 * {
   margin: 0;
@@ -13,6 +14,7 @@ body {
   color: #eaecef;
 }
 /** todo part **/
+
 .head-content {
   height: 200px;
   width: 100%;
@@ -72,9 +74,9 @@ label,
 h5 {
   color: #011627;
 }
-/** to do part end **/
+/** todo part end **/
 
-/**Sidebar start **/
+/** Sidebar start **/
 
 header {
   padding: 30px;
@@ -145,8 +147,10 @@ header svg {
   margin-top: -15px;
   color: #eaecef;
 }
+/*** Sidebar end ***/
 
-/** Card **/
+
+/** Card start **/
 .add-item-input {
   display: flex;
 }
@@ -174,7 +178,10 @@ header svg {
   color: #011627;
 }
 
-/* about */
+/*** card end ***/
+
+/*** about page start ***/
+
 .about {
   background-color: #f6f7f8;
   height: 100%;
@@ -240,3 +247,235 @@ header svg {
   color: green;
   text-decoration: none;
 }
+
+/* about page end*/
+
+
+/*** login page start ***/
+
+.login-page-body{
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.wave {
+  position: fixed;
+  height: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.login-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 7rem;
+  padding:0 2rem;
+}
+
+.img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.img img {
+  width: 500px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.login-form{
+  width: 360px;
+}
+
+.avatar {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.login-form h2 {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  margin: 15px 0;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #38d39f;
+  transition: .3s;
+}
+
+.input-div:after {
+  right: 50%;
+}
+
+.input-div:before {
+  left: 50%;
+}
+
+.input-div.focus .i i {
+  color:#38d39f;
+}
+
+.input-div.focus div h5{
+  top:-5px;
+  font-size:15px;
+}
+
+.input-div.focus:after, .input-div.focus:before {
+  width: 50%;
+}
+
+.input-div.one {
+  margin-top: 0;
+}
+
+
+.input-div.two {
+  margin-bottom: 4px;
+}
+
+.i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i {
+  color:#d9d9d9;
+  transition: .3s;
+}
+
+.input-div > div{
+  position: relative;
+  height :45px;
+
+}
+
+.input-div > div h5 {
+  
+  position: absolute;
+  left:25px;
+  top:-15px;
+  transform: translate(-50%);
+  color:#999;
+  font-size: 18px;
+
+  transition: .3s;
+}
+
+.login-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  border:none;
+  outline: none;
+  background: none;
+  background-color: none;
+  padding: 0.5rem 0.7rem;
+  font-size:1.2rem;
+  font-family: 'Poppins' , sans-serif;
+  color:#555;
+}
+
+
+
+.login-info{
+display: block;
+text-align: right;
+color:#999;
+font-size: 0.9rem;
+transition: .3s;
+}
+
+.login-info:hover {
+  color:#4687D7;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin:1rem 0;
+  font-size: 1.2rem;
+  outline: none;
+  border:none;
+  background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,135,215,1) 35%, rgba(0,212,255,1) 100%);
+  cursor: pointer;
+  color:#fff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  background-size: 200%;
+  transition: .5s;
+}
+
+.login-btn:hover {
+  background-position: right;
+}
+
+@media screen and (max-width:1050px) {
+  .login-page-container{
+    grid-gap: 5rem;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .login-form {
+    width: 290px;
+  }
+
+  .login-container h2 {
+    font-size:2.4rem;
+    margin: 8px 0;
+  }
+
+  .img img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .img{
+    display: none;
+  }
+
+  .login-page-container{
+    grid-template-columns: 1fr;
+  }
+
+  .wave {
+    display: none;
+  }
+
+  .login-container {
+    justify-content: center;
+  }
+}
+
+/*** login page end ***/
+
