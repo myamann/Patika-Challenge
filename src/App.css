@@ -157,7 +157,7 @@ header svg {
 
 .card-list-item-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   height: 160px;
   overflow: auto;
 }
